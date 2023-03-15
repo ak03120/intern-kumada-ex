@@ -4,26 +4,26 @@
   </mat-card-header>
   <mat-card-content>
     <div>
-      <mat-form-field class="field-big">
+      <mat-form-field class="field-big" appearance="outline">
         <mat-label>書籍名</mat-label>
-        <input matInput>
+        <input matInput [(ngModel)]="cbook.name">
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field class="field-big">
+      <mat-form-field class="field-big" appearance="outline">
         <mat-label>あらすじ</mat-label>
-        <textarea matInput></textarea>
+        <textarea matInput [(ngModel)]="cbook.detail"></textarea>
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field class="field-small">
+      <mat-form-field class="field-small" appearance="outline">
         <mat-label>評価点</mat-label>
-        <input matInput type="number">
+        <input matInput type="number" [(ngModel)]="cbook.evaluation">
       </mat-form-field>
     </div>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary">追加</button>
+    <button mat-raised-button color="primary" (click)="onAdd()">追加</button>
   </mat-card-actions>
 </mat-card>
 
