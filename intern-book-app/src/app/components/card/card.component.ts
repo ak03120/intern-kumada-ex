@@ -9,4 +9,9 @@ import { Book } from 'src/app/types/book';
 
 export class CardComponent {
   @Input() book?: Book;
+  @Output() deleteCardEvent = new EventEmitter<number>();
+
+  deleteCard(id: number) {
+    this.deleteCardEvent.emit(id);
+  }
 }

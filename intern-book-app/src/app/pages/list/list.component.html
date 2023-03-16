@@ -27,6 +27,6 @@
   </mat-card-actions>
 </mat-card>
 
-<app-card *ngFor="let book of bookList;" [book]="book"></app-card>
+<app-card *ngFor="let book of bookList;" [book]="book" (deleteCardEvent)="onDelete($event)"></app-card>
 
 
