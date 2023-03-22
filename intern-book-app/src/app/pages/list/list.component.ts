@@ -19,7 +19,7 @@ export class ListComponent {
   ];
   onAdd(): void {
     this.bookList.push({
-      id: this.bookList[this.bookList.length-1].id+1, // this.bookList.lengthの場合ID被りが発生する。
+      id: this.bookList.length > 0 ? this.bookList[this.bookList.length-1].id+1 : 0, // this.bookList.lengthの場合ID被りが発生する。 // this.bookList[this.bookList.length-1].id+1だけだと要素数0のときundefined
       name: this.cardBook.name,
       detail: this.cardBook.detail,
       evaluation: this.cardBook.evaluation
