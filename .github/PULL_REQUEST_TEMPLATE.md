@@ -1,9 +1,9 @@
 ## Checklist for Developer
-- [x] 最新のdevelopブランチをPullした。Pulled the latest develop branch.
+- [ ] 最新のdevelopブランチをPullした。Pulled the latest develop branch.
   - できない理由 Reason not to do: 
-- [x] Pull RequestをIssueに紐付けた。Connected with the issue.
-- [x] 自分をAssignした。Assigned yourself.
-- [x] レビュワーを指定した。Assigned reviewer.
+- [ ] Pull RequestをIssueに紐付けた。Connected with the issue.
+- [ ] 自分をAssignした。Assigned yourself.
+- [ ] レビュワーを指定した。Assigned reviewer.
 
 ## 📝 そのほかの関連するIssue / Related issues other than connected one
 <!-- ZenHubで紐付けられなかったIssueの番号を記載 -->
