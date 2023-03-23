@@ -12,8 +12,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ListComponent } from './pages/list/list.component';
-import { CardComponent, DialogComponent } from './components/card/card.component';
+import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
+import { DeleteMessageComponent } from './delete-message/delete-message.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     ToolbarComponent,
     ListComponent,
     CardComponent,
-    DialogComponent
+    DeleteMessageComponent
   ],
   imports: [
     MatToolbarModule,
