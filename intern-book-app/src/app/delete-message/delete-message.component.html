@@ -1,1 +1,8 @@
-<p>delete-message works!</p>
+<h2 mat-dialog-title>本を削除しますか？</h2>
+  <mat-dialog-content>
+    <p>{{data.name}}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close="0">キャンセル</button>
+    <button mat-button color="warn" mat-dialog-close="1">削除</button>
+  </mat-dialog-actions>
