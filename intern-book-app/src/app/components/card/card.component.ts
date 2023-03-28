@@ -13,7 +13,6 @@ import { DeleteMessageComponent } from 'src/app/delete-message/delete-message.co
 export class CardComponent {
   @Input() book?: Book;
   @Output() deleteCardEvent = new EventEmitter<number>();
-  bookId: number = 0;
 
   constructor(private dialog:MatDialog){
   }
@@ -27,7 +26,7 @@ export class CardComponent {
     .open(DeleteMessageComponent, {data: targetBook})
     .afterClosed()
     .subscribe(result => {
-      if(result == "1") this.deleteCard(targetBook.id);
+      if(result === "1") this.deleteCard(targetBook.id);
     });
   }
 }
