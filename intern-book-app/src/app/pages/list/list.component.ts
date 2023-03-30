@@ -31,10 +31,13 @@ export class ListComponent {
     this.messageService.add(`${ListComponent.name}: 本「${this.cardBook.name}」を追加しました。`);
   }
   onDelete(id: number): void {
-    this.bookList = this.bookList.filter((item) => item.id !== id);
+    this.bookList = this.bookList.filter((book) => book.id !== id);
   }
   validationCheck(): boolean {
-    if(!this.cardBook.name.length || !this.cardBook.detail.length || this.cardBook.evaluation == null) {return true;}
-    else {return false;}
+    // 改行について中村さんから伝授していただきました
+    if(!this.cardBook.name
+      || !this.cardBook.detail
+      || this.cardBook.evaluation === null) return true;
+    else return false;
   }
 }
