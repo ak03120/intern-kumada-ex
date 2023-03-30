@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, Inject } from '@angular/core';
 import { Book } from 'src/app/types/book';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteMessageComponent } from 'src/app/delete-message/delete-message.component';
-import { MessageService } from '../message/message.service';
+import { MessageService } from '../../services/message.service';
 
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { Book } from 'src/app/types/book';
 import { FormsModule }   from '@angular/forms';
-import { MessageService } from 'src/app/components/message/message.service';
+import { MessageService } from 'src/app/services/message.service';
 
 @Component({
   selector: 'app-list',
