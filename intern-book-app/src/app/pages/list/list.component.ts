@@ -33,4 +33,8 @@ export class ListComponent {
   onDelete(id: number): void {
     this.bookList = this.bookList.filter((item) => item.id !== id);
   }
+  validationCheck(): boolean {
+    if(!this.cardBook.name.length || !this.cardBook.detail.length || this.cardBook.evaluation == null) {return true;}
+    else {return false;}
+  }
 }
