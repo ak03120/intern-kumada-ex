@@ -1,0 +1,11 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title>ログ</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions align="start">
+        <button mat-raised-button color="warn" type="button" (click)="messageService.clear()">クリア</button>
+    </mat-card-actions>
+    <mat-card-content>
+        <div *ngFor='let message of messageService.messages'>{{message}}</div>
+    </mat-card-content>
+</mat-card>

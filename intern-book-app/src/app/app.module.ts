@@ -15,6 +15,7 @@ import { ListComponent } from './pages/list/list.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { DeleteMessageComponent } from './delete-message/delete-message.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DeleteMessageComponent } from './delete-message/delete-message.componen
     ToolbarComponent,
     ListComponent,
     CardComponent,
-    DeleteMessageComponent
+    DeleteMessageComponent,
+    MessageComponent
   ],
   imports: [
     MatToolbarModule,
