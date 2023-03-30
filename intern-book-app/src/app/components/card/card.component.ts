@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter, Inject } from '@angular/core';
 import { Book } from 'src/app/types/book';
 import { MatDialog } from '@angular/material/dialog';
 import { DeleteMessageComponent } from 'src/app/delete-message/delete-message.component';
-import { MessageService } from '../message/message.service';
+import { MessageService } from '../../services/message.service';
 
 
 @Component({
@@ -12,10 +12,9 @@ import { MessageService } from '../message/message.service';
 })
 
 export class CardComponent {
-  
+
   @Input() book?: Book;
   @Output() deleteCardEvent = new EventEmitter<number>();
-  bookId: number = 0;
 
   constructor(private dialog: MatDialog, private messageService: MessageService){
   }
@@ -29,7 +28,7 @@ export class CardComponent {
     .open(DeleteMessageComponent, {data: targetBook})
     .afterClosed()
     .subscribe(result => {
-      if(result == "1") this.deleteCard(targetBook.id);
+      if(result === "1") this.deleteCard(targetBook.id);
       this.messageService.add(`${CardComponent.name}: 本「${targetBook.name}」を削除しました。`);
     });
   }
