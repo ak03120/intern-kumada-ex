@@ -2,34 +2,34 @@
   <mat-card-header>
     <mat-card-title><h1>書籍登録</h1></mat-card-title>
   </mat-card-header>
-  <mat-card-content>
+  <mat-card-content [formGroup]="bookForm">
     <div>
       <mat-form-field class="field-big" appearance="outline">
         <mat-label>書籍名</mat-label>
-        <input matInput  [(ngModel)]="cardBook.name" required>
+        <input matInput type="text" formControlName="name">
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="field-big" appearance="outline">
         <mat-label>あらすじ</mat-label>
-        <textarea matInput [(ngModel)]="cardBook.detail" required></textarea>
+        <textarea matInput type="text" formControlName="detail"></textarea>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="field-small" appearance="outline">
         <mat-label>評価点</mat-label>
-        <input matInput [(ngModel)]="cardBook.evaluation" type="number" required>
+        <input matInput type="number" formControlName="evaluation">
       </mat-form-field>
     </div>
   </mat-card-content>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary" (click)="onAdd()" [disabled]="validationCheck()">追加</button>
+    <button mat-raised-button color="primary" (click)="onAdd()" [disabled]="bookForm.invalid">追加</button>
   </mat-card-actions>
 </mat-card>
 
-<div *ngIf="bookList.length > 0; then trueBook else falseBook"></div>
-<ng-template #trueBook>
+<div *ngIf="bookList.length > 0; then existBook else nothingBook"></div>
+<ng-template #existBook>
   <app-card *ngFor="let book of bookList;" [book]="book" (deleteCardEvent)="onDelete($event)"></app-card>
 </ng-template>
-<ng-template #falseBook><div class="message-container">データがありません</div></ng-template>
+<ng-template #nothingBook><div class="message-container">データがありません</div></ng-template>
 

@@ -27,9 +27,11 @@ export class CardComponent {
     this.dialog
     .open(DeleteMessageComponent, {data: targetBook})
     .afterClosed()
-    .subscribe(result => {
-      if(result === "1") this.deleteCard(targetBook.id);
-      this.messageService.add(`${CardComponent.name}: 本「${targetBook.name}」を削除しました。`);
+    .subscribe(isDelete => {
+      if(isDelete) {
+        this.deleteCard(targetBook.id);
+        this.messageService.add(`${CardComponent.name}: 本「${targetBook.name}」を削除しました。`);
+      }
     });
   }
 }
