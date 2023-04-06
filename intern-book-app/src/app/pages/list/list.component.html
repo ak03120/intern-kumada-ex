@@ -27,9 +27,9 @@
   </mat-card-actions>
 </mat-card>
 
-<div *ngIf="bookList.length > 0; then trueBook else falseBook"></div>
-<ng-template #trueBook>
+<div *ngIf="bookList.length > 0; then existBook else nothingBook"></div>
+<ng-template #existBook>
   <app-card *ngFor="let book of bookList;" [book]="book" (deleteCardEvent)="onDelete($event)"></app-card>
 </ng-template>
-<ng-template #falseBook><div class="message-container">データがありません</div></ng-template>
+<ng-template #nothingBook><div class="message-container">データがありません</div></ng-template>
 

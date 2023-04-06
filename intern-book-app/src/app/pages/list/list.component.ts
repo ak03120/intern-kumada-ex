@@ -40,9 +40,6 @@ export class ListComponent {
   }
   validationCheck(): boolean {
     // 改行について中村さんから伝授していただきました
-    if(!this.cardBook.name
-      || !this.cardBook.detail
-      || this.cardBook.evaluation === null) return true;
-    else return false;
+    return !this.cardBook.name || !this.cardBook.detail || this.cardBook.evaluation === null;
   }
 }
