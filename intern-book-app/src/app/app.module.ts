@@ -16,6 +16,7 @@ import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { DeleteMessageComponent } from './delete-message/delete-message.component';
 import { MessageComponent } from './components/message/message.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MessageComponent } from './components/message/message.component';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
