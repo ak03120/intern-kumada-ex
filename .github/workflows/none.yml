@@ -1,0 +1,19 @@
+name: None
+on:
+  push:
+    branches-ignore:
+      - "main"
+env:
+  BASE_BRANCH: main
+  REVIEWER: ak03120
+
+jobs:
+  create_pr:
+    # ブランチが作成されただけならスキップ
+    if: ${{ !github.event.created }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: check
+        id: check
+        run: |
+          echo
