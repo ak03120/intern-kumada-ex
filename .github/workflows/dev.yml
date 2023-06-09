@@ -33,4 +33,4 @@ jobs:
         run: gh pr create --fill -B ${{ env.BASE_BRANCH }} -r ${{ env.REVIEWER }}
         env:
           # github-actions[bot]のトークンを使って作成するために設定
-          GH_TOKEN: ${{ secrets.TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
